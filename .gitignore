@@ -1,0 +1,41 @@
+# Ignore all generated files and temporary files, but keep core project files
+
+# Generated Database and Output files
+db/
+incremental_db/
+output_files/
+
+# Simulation output and log files
+simulation/modelsim/*.wlf
+simulation/modelsim/*.log
+simulation/modelsim/*.sdo
+simulation/modelsim/*.vcd
+simulation/modelsim/compile.do
+simulation/modelsim/work
+
+# Quartus Prime generated files
+*.qdf
+*.sof
+*.pof
+*.jdi
+*.jic
+*.pmsf
+*.pin
+*.smsg
+*.srf
+*.summary
+*.qip
+*.qip_edit
+*.qdb
+*.done
+
+# Temporary and backup files
+*.bak
+*.log
+*.temp
+*.~*
+
+# FPGA programming and configuration files
+*.jdi
+*.jic
+*.pmsf

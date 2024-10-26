@@ -10,6 +10,8 @@ simulation/modelsim/*.wlf
 simulation/modelsim/*.log
 simulation/modelsim/*.sdo
 simulation/modelsim/*.vcd
+simulation/modelsim/*.svo
+simulation/modelsim/*.sft
 simulation/modelsim/compile.do
 simulation/modelsim/work
 
@@ -28,14 +30,18 @@ simulation/modelsim/work
 *.qip_edit
 *.qdb
 *.done
+*.svo  # Simulation output file
+*.sft  # Signal Tap debugging file
+*.txt
+# FPGA programming and configuration files
+*.jdi
+*.jic
+*.pmsf
 
 # Temporary and backup files
 *.bak
 *.log
 *.temp
 *.~*
-
-# FPGA programming and configuration files
-*.jdi
-*.jic
-*.pmsf
+*.sft
+*.svo

@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C7G
-set_global_assignment -name TOP_LEVEL_ENTITY miniALU
+set_global_assignment -name TOP_LEVEL_ENTITY miniALU_tb
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 23.1STD.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "02:06:24  OCTOBER 26, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.1 Lite Edition"
@@ -55,9 +55,50 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name SYSTEMVERILOG_FILE miniALU_top.sv
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SYSTEMVERILOG_FILE miniALU_tb.sv
+set_location_assignment PIN_C10 -to in[0]
+set_location_assignment PIN_C11 -to in[1]
+set_location_assignment PIN_D12 -to in[2]
+set_location_assignment PIN_C12 -to in[3]
+set_location_assignment PIN_A12 -to in[4]
+set_location_assignment PIN_B12 -to in[5]
+set_location_assignment PIN_A13 -to in[6]
+set_location_assignment PIN_A14 -to in[7]
+set_location_assignment PIN_B14 -to in[8]
+set_location_assignment PIN_F15 -to in[9]
+set_location_assignment PIN_B11 -to out[9]
+set_location_assignment PIN_A11 -to out[8]
+set_location_assignment PIN_D14 -to out[7]
+set_location_assignment PIN_E14 -to out[6]
+set_location_assignment PIN_C13 -to out[5]
+set_location_assignment PIN_D13 -to out[4]
+set_location_assignment PIN_B10 -to out[3]
+set_location_assignment PIN_A10 -to out[2]
+set_location_assignment PIN_A9 -to out[1]
+set_location_assignment PIN_A8 -to out[0]
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to in[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to in[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to in[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to in[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to in[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to in[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to in[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to in[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to in[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to in[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to out[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to out[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to out[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to out[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to out[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to out[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to out[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to out[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to out[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to out[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

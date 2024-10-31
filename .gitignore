@@ -45,3 +45,8 @@ simulation/modelsim/work
 *.~*
 *.sft
 *.svo
+*.wlf
+miniALU/simulation/questa/rtl_work/_lib1_0.qtl
+*.qtl
+*.qpg
+/miniALU/simulation/questa/rtl_work

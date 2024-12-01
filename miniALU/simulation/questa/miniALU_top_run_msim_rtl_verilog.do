@@ -5,6 +5,6 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+C:/Users/song_/Desktop/Code/Digital\ Audio\ Visualizer/miniALU {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/miniALU/miniALU_top.sv}
 vlog -sv -work work +incdir+C:/Users/song_/Desktop/Code/Digital\ Audio\ Visualizer/miniALU {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/miniALU/miniALU_tb.sv}
+vlog -sv -work work +incdir+C:/Users/song_/Desktop/Code/Digital\ Audio\ Visualizer/miniALU {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/miniALU/miniALU_2.sv}
 

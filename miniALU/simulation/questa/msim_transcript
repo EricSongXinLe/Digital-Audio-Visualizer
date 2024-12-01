@@ -24,37 +24,54 @@
 # Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/song_/Desktop/Code/Digital\ Audio\ Visualizer/miniALU {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/miniALU/miniALU_top.sv}
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 19:44:16 on Nov 13,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/song_/Desktop/Code/Digital Audio Visualizer/miniALU" C:/Users/song_/Desktop/Code/Digital Audio Visualizer/miniALU/miniALU_top.sv 
-# -- Compiling module miniALU_top
-# 
-# Top level modules:
-# 	miniALU_top
-# End time: 19:44:16 on Nov 13,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/song_/Desktop/Code/Digital\ Audio\ Visualizer/miniALU {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/miniALU/miniALU_tb.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 19:44:16 on Nov 13,2024
+# Start time: 14:08:25 on Dec 01,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/song_/Desktop/Code/Digital Audio Visualizer/miniALU" C:/Users/song_/Desktop/Code/Digital Audio Visualizer/miniALU/miniALU_tb.sv 
 # -- Compiling module miniALU_tb
 # 
 # Top level modules:
 # 	miniALU_tb
-# End time: 19:44:16 on Nov 13,2024, Elapsed time: 0:00:00
+# End time: 14:08:25 on Dec 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/song_/Desktop/Code/Digital\ Audio\ Visualizer/miniALU {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/miniALU/miniALU_2.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:08:25 on Dec 01,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/song_/Desktop/Code/Digital Audio Visualizer/miniALU" C:/Users/song_/Desktop/Code/Digital Audio Visualizer/miniALU/miniALU_2.sv 
+# -- Compiling module miniALU_2
+# 
+# Top level modules:
+# 	miniALU_2
+# End time: 14:08:25 on Dec 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim -voptargs=+acc work.miniALU_tb
 # vsim -voptargs="+acc" work.miniALU_tb 
-# Start time: 19:44:22 on Nov 13,2024
+# Start time: 14:08:31 on Dec 01,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading sv_std.std
 # Loading work.miniALU_tb(fast)
-# Loading work.miniALU_top(fast)
-add wave -position insertpoint sim:/miniALU_tb/*
+# Loading work.miniALU_2(fast)
+add wave -position end  sim:/miniALU_tb/res
 run -all
-# End time: 19:46:00 on Nov 13,2024, Elapsed time: 0:01:38
+add wave -position end  sim:/miniALU_tb/op1
+add wave -position end  sim:/miniALU_tb/op2
+add wave -position end  sim:/miniALU_tb/ope
+add wave -position end  sim:/miniALU_tb/sign
+add wave -position insertpoint  \
+sim:/miniALU_tb/res \
+sim:/miniALU_tb/op1 \
+sim:/miniALU_tb/op2 \
+sim:/miniALU_tb/ope \
+sim:/miniALU_tb/sign
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.miniALU_tb(fast)
+# Loading work.miniALU_2(fast)
+run -all
+# End time: 14:10:25 on Dec 01,2024, Elapsed time: 0:01:54
 # Errors: 0, Warnings: 1

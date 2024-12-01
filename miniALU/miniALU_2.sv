@@ -4,12 +4,11 @@ module miniALU_2 (
 		input [3:0] op2,
 		input ope,
 		input sign,
-		
-		output [19:0] res
+		output logic [7:0] displayBits [0:5]
     );
 	 
-	 
-
+	logic [19:0] res;
+	displayEncoder DE (.result(res),.displayBits(displayBits));
     // The following block contains the logic of your combinational circuit
     always_comb begin
         if(ope==0) begin

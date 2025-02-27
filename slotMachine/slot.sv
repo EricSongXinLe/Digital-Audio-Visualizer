@@ -5,3 +5,4 @@ input [1:0]status,
 output [3:0] value
 
 );
+endmodule

@@ -32,14 +32,11 @@ module clock_divider #(BASESPEED = 50000000)(
 	end
 
 	always_comb begin
-		if (rst_shift_reg == 2'b10)begin
-			outClk_d = 0;
-		end
-		if (counter <= max_count / 2)begin
-			outClk_d = 0;
-		end
-		else begin
-			outClk_d = 1;
-		end
-end
+		 if (rst_shift_reg == 2'b10)
+			  outClk_d = 0;
+		 else if (counter <= max_count / 2)
+			  outClk_d = 0;
+		 else
+			  outClk_d = 1;
+	end
 endmodule

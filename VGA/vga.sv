@@ -70,18 +70,24 @@ module vga(
 		if(rst)begin
         hc <= 0;
         vc <= 0;
-		end
-		if(hc == (HPIXELS+HFP+HSPULSE+HBP - 1))begin
-			hc <= hc+1;
 		end else begin
-			hc <= 0;
+			if(hc == (HPIXELS+HFP+HSPULSE+HBP - 1))begin
+				hc <= 0;
+				if(vc == (VPIXELS+VFP+VSPULSE+VBP - 1))begin
+					vc<= 0;
+				end else begin
+					vc <= vc+1;
+				end
+			end else begin
+				hc <= hc+1;
+			end
 		end
 	end
 	
 	/* TODO(3): when should hsync and vsync go low?
 	*/
-	assign hsync = 1;
-	assign vsync = 1;
+	assign hsync = ~(hc >= (HPIXELS+HFP) && hc < (HPIXELS+HFP+HSPULSE));
+	assign vsync = ~(vc >= (VPIXELS+VFP) && vc < (VPIXELS+VFP+VSPULSE));
 	
    // in the combinational block, we set red, green, blue outputs
 	always_comb begin
@@ -90,9 +96,15 @@ module vga(
 		        if not, we're in the blanking interval, so set them all to 0
 		    NOTE: our inputs are fewer bits than the outputs, so left-shift accordingly!
 		*/
+		if(hc >= HPIXELS || vc >= VPIXELS)begin
         red = 0;
         green = 0;
         blue = 0;
+		end else begin
+		  red = input_red << 1;
+        green = input_green << 1;
+        blue = input_blue << 2;
+		end
 	end
 
 endmodule

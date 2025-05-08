@@ -1,4 +1,4 @@
-module top (
+module vga_top (
     // External clock (50 MHz) from your board
     input  wire clk_50,
     // Asynchronous reset pushbutton (active-high)
@@ -11,57 +11,95 @@ module top (
     output wire [3:0] green,
     output wire [3:0] blue,
     
-    // Optional outputs: horizontal and vertical counters from the VGA module
+    // Optional outputs for debugging or syncing (VGA counters)
     output wire [9:0] hc_out,
     output wire [9:0] vc_out
 );
 
-    //-------------------------------------------------------------------------
-    // 1. Instantiate the PLL
-    //   This PLL converts the 50 MHz input clock to a 25 MHz VGA clock.
-    //   The PLL was generated using Quartus’s ALTPLL IP and is already added.
-    //-------------------------------------------------------------------------
-    wire vgaclk;    // 25 MHz clock for VGA
-    
-    // Instantiate the PLL module.
-    // Note: Replace "vgaclk" with the actual name of the PLL module if it differs.
+    // ----------------------------------------------------------------
+    // Parameter definitions for active display and downscaled resolution
+    // ----------------------------------------------------------------
+    localparam H_PIXELS   = 640;                // active horizontal pixels
+    localparam V_PIXELS   = 480;                // active vertical pixels
+    localparam SCALE      = 20;                 // blocking factor: each block is 20x20 pixels
+    localparam DS_WIDTH   = H_PIXELS / SCALE;     // downscaled width (e.g., 640/20=32)
+    localparam DS_HEIGHT  = V_PIXELS / SCALE;     // downscaled height (e.g., 480/20=24)
+    localparam RAM_SIZE   = DS_WIDTH * DS_HEIGHT; // total number of blocks (e.g., 32*24=768)
+    localparam ADDR_WIDTH = $clog2(RAM_SIZE);       // address width for RAM
+
+    // ----------------------------------------------------------------
+    // Instantiate the PLL: convert 50 MHz into a 25 MHz clock for VGA timing
+    // ----------------------------------------------------------------
+    wire vgaclk;
     vgaclk my_pll (
         .inclk0(clk_50),
         .c0(vgaclk)
     );
-    
-    //-------------------------------------------------------------------------
-    // 2. Reset Synchronization
-    //    To properly reset the VGA module, we filter the external reset through
-    //    a shift register to synchronize it to the VGA clock domain.
-    //-------------------------------------------------------------------------
+
+    // ----------------------------------------------------------------
+    // Reset Synchronization: shift in the external reset (rst_btn)
+    // ----------------------------------------------------------------
     reg [3:0] rst_shift;
     always @(posedge vgaclk) begin
-        // Shifting in the external reset (rst_btn) over several cycles
         rst_shift <= {rst_shift[2:0], rst_btn};
     end
-    // Use the last bit of the shift register as the synchronized reset signal.
-    wire rst_sync = rst_shift[3];
-    
-    //-------------------------------------------------------------------------
-    // 3. Instantiate the VGA Module
-    //    For testing purposes, we drive the VGA module with constant color
-    //    values. You can modify these signals or replace them with a graphics
-    //    generator in your design.
-    //-------------------------------------------------------------------------
-    // Example test pattern: constant color (bright red, for instance)
-    wire [2:0] test_red   = 3'b111;  // maximum red intensity
-    wire [2:0] test_green = 3'b000;  // no green
-    wire [1:0] test_blue  = 2'b00;   // no blue
-    
+    // When the shift register holds all zeros, our synchronized reset is active
+    wire rst_sync = (rst_shift == 4'b0000);
+
+    // ----------------------------------------------------------------
+    // VGA counters: these are generated inside the VGA module.
+    // We use them both to drive the VGA read address and as inputs
+    // to the graphics module.
+    // ----------------------------------------------------------------
+    wire [9:0] hc;
+    wire [9:0] vc;
+
+    // ----------------------------------------------------------------
+    // Graphics Module: computes what pixel data should be written.
+    // It outputs a write address, an 8-bit pixel color, and a write enable.
+    // (The graphics module should be modified to provide these ports.)
+    // ----------------------------------------------------------------
+    wire [ADDR_WIDTH-1:0] write_addr;
+    wire [7:0]            write_data;
+    wire                  write_en;
+
+    graphics graphics_inst (
+        .hc(hc),
+        .vc(vc),
+        .write_addr(write_addr),
+        .write_data(write_data),
+        .write_en(write_en)
+    );
+
+
+    wire [7:0] pixel_out;
+    ping_pong_ram #(
+        .H_PIXELS(H_PIXELS),
+        .V_PIXELS(V_PIXELS),
+        .SCALE(SCALE)
+    ) ping_pong_inst (
+        .clk(vgaclk),
+        .hc(hc),
+        .vc(vc),
+        .write_addr(write_addr),
+        .write_data(write_data),
+        .write_en(write_en),
+        .pixel_out(pixel_out)
+    );
+
+    // ----------------------------------------------------------------
+    // VGA Module: Reads pixel data from the ping-pong RAM.
+    // Since the VGA module expects a 3:3:2 format (3-bit red, 3-bit green, 2-bit blue),
+    // we extract bits from the 8-bit pixel_out accordingly.
+    // ----------------------------------------------------------------
     vga vga_inst (
         .vgaclk(vgaclk),
         .rst(rst_sync),
-        .input_red(test_red),
-        .input_green(test_green),
-        .input_blue(test_blue),
-        .hc_out(hc_out),
-        .vc_out(vc_out),
+        .input_red(pixel_out[7:5]),   // Convert 8-bit pixel to 3-bit red input
+        .input_green(pixel_out[4:2]), // Convert 8-bit pixel to 3-bit green input
+        .input_blue(pixel_out[1:0]),  // Convert 8-bit pixel to 2-bit blue input
+        .hc_out(hc),
+        .vc_out(vc),
         .hsync(hsync),
         .vsync(vsync),
         .red(red),
@@ -69,11 +107,10 @@ module top (
         .blue(blue)
     );
 
-    //-------------------------------------------------------------------------
-    // 4. Pin Planning (Reminder)
-    //    Be sure to assign the FPGA pins for your external clock, pushbutton,
-    //    and VGA outputs (hsync, vsync, red, green, blue) in your Quartus
-    //    pin planner file.
-    //-------------------------------------------------------------------------
+    // ----------------------------------------------------------------
+    // Optional: expose VGA counters to top-level outputs for debugging.
+    // ----------------------------------------------------------------
+    assign hc_out = hc;
+    assign vc_out = vc;
 
 endmodule

@@ -86,3 +86,7 @@ run -all
 add wave -position insertpoint  \
 sim:/fft_tb/out
 run -all
+# Break key hit
+# Simulation stop requested.
+# End time: 22:20:05 on May 26,2025, Elapsed time: 0:07:05
+# Errors: 0, Warnings: 2

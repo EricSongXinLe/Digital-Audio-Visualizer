@@ -1,0 +1,249 @@
+m255
+K4
+z2
+Z0 !s12c _opt1
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s12c _opt
+R1
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/simulation/questa
+T_opt
+!s110 1747277418
+VJKEd0WM^3gQ1<VU`:=loh2
+04 9 4 work butterfly fast 0
+=1-745d22a8b547-6825566a-1ff-6978
+R1
+Z3 !s12b OEM100
+!s124 OEM10U1 
+o-quiet -auto_acc_if_foreign -work work
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;2023.3;77
+R2
+T_opt1
+!s110 1747279569
+VEdPBK@COF3HND@FceP2?P1
+04 6 4 work fft_tb fast 0
+=17-745d22a8b547-68255ed1-213-701c
+R1
+R3
+!s124 OEM10U6 
+o-quiet -auto_acc_if_foreign -work work +acc
+R4
+n@_opt1
+R5
+vbutterfly
+Z6 2C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly.sv
+Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z8 DXx4 work 7 fft_pkg 0 22 n4>QJe[Hn_[iKm_5SWjhV0
+DXx4 work 17 butterfly_sv_unit 0 22 3;fE0QRWz7l48b?djVl620
+Z9 !s110 1747279565
+Z10 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 c84OLTaA@aRRNV=4gaTlN0
+IX[MaE6nFJKPnfdY:SUQ@V0
+!s105 butterfly_sv_unit
+S1
+R2
+Z11 w1747279481
+Z12 8C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly.sv
+Z13 FC:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly.sv
+!i122 24
+L0 12 28
+Z14 OL;L;2023.3;77
+31
+Z15 !s108 1747279564.000000
+Z16 !s107 C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly.sv|
+Z17 !s90 -reportprogress|300|-work|work|C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly.sv|
+!i113 0
+Z18 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+Xbutterfly_sv_unit
+R6
+R7
+R8
+R9
+V3;fE0QRWz7l48b?djVl620
+r1
+!s85 0
+!i10b 1
+!s100 g3>?PD3n`DkoMfM`Zk1MK0
+I3;fE0QRWz7l48b?djVl620
+!i103 1
+S1
+R2
+R11
+R12
+R13
+!i122 24
+L0 9 0
+R14
+31
+R15
+R16
+R17
+!i113 0
+R18
+R4
+vbutterfly_tb
+2C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly_tb.sv
+R7
+R8
+R9
+!i10b 1
+!s100 a0F`CJ2ajGPWb4nohKSnz0
+IhXDY_7nCQnjLJOE0MHM9^3
+S1
+R2
+w1747275516
+8C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly_tb.sv
+FC:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly_tb.sv
+!i122 25
+L0 1 17
+R10
+R14
+r1
+!s85 0
+31
+Z19 !s108 1747279565.000000
+!s107 C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly_tb.sv|
+!i113 0
+R18
+R4
+Xfft_pkg
+R6
+R7
+R9
+!i10b 1
+!s100 Bj[OmM7dDfz:kVG[NVDZH3
+In4>QJe[Hn_[iKm_5SWjhV0
+S1
+R2
+R11
+R12
+R13
+!i122 24
+Z20 L0 2 0
+Vn4>QJe[Hn_[iKm_5SWjhV0
+R14
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R18
+R4
+vfft_tb
+2C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv
+R7
+R8
+R9
+!i10b 1
+!s100 Nf0@2aYn?T<?iH0NSdKVD1
+IVUdTi``2zPoJOGlSYJ`M^1
+S1
+R2
+w1747279505
+8C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv
+FC:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv
+!i122 26
+Z21 L0 3 44
+R10
+R14
+r1
+!s85 0
+31
+R19
+!s107 C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv|
+!i113 0
+R18
+R4
+vfft_top
+Z22 2C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv
+R7
+R8
+DXx4 work 15 fft_top_sv_unit 0 22 _eTf5?khTXD;=;SV4]H6n0
+R9
+R10
+r1
+!s85 0
+!i10b 1
+!s100 dMa[6A>7HYVL]zA4V27E]0
+Ik]FB_9=ZAeoGfl0]A:Y5V3
+!s105 fft_top_sv_unit
+S1
+R2
+Z23 w1747278937
+Z24 8C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv
+Z25 FC:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv
+!i122 27
+R21
+R14
+31
+R19
+Z26 !s107 C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv|
+Z27 !s90 -reportprogress|300|-work|work|C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv|
+!i113 0
+R18
+R4
+Xfft_top_sv_unit
+R22
+R7
+R8
+R9
+V_eTf5?khTXD;=;SV4]H6n0
+r1
+!s85 0
+!i10b 1
+!s100 ei0`=4?^EfQ<H]boUZ_JY0
+I_eTf5?khTXD;=;SV4]H6n0
+!i103 1
+S1
+R2
+R23
+R24
+R25
+!i122 27
+R20
+R14
+31
+R19
+R26
+R27
+!i113 0
+R18
+R4

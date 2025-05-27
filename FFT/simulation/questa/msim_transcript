@@ -1,0 +1,732 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do fft_top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work rtl_work 
+# Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/song_/Desktop/Code/Digital\ Audio\ Visualizer/FFT {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:48:13 on May 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT" C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly.sv 
+# -- Compiling package fft_pkg
+# -- Compiling package butterfly_sv_unit
+# -- Importing package fft_pkg
+# -- Compiling module butterfly
+# 
+# Top level modules:
+# 	butterfly
+# End time: 19:48:13 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/song_/Desktop/Code/Digital\ Audio\ Visualizer/FFT {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:48:14 on May 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT" C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv 
+# -- Compiling module fft_top
+# ** Error: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(4): (vlog-2730) Undefined variable: 'WIDTH'.
+# ** Error (suppressible): C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(4): (vlog-2388) 'in' already declared in this scope (fft_top) at C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(4).
+# -- Importing package fft_pkg
+# ** Error: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(4): (vlog-13294) Identifier must be declared with a port mode: in.
+# End time: 19:48:14 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: c:/intelfpga_lite/23.1std/questa_fse/win64/vlog failed.
+# Error in macro ./fft_top_run_msim_rtl_verilog.do line 9
+# c:/intelfpga_lite/23.1std/questa_fse/win64/vlog failed.
+#     while executing
+# "vlog -sv -work work +incdir+C:/Users/song_/Desktop/Code/Digital\ Audio\ Visualizer/FFT {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_t..."
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:49:08 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly.sv 
+# -- Compiling package fft_pkg
+# ** Warning: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly.sv(9): (vlog-13233) Design unit "butterfly_sv_unit" already exists and will be overwritten. Design unit compiled with different set of options.
+# -- Compiling package butterfly_sv_unit
+# -- Importing package fft_pkg
+# -- Compiling module butterfly
+# 
+# Top level modules:
+# 	butterfly
+# End time: 19:49:08 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:49:08 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv 
+# -- Compiling module fft_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	fft_tb
+# End time: 19:49:08 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:49:08 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv 
+# -- Compiling module fft_top
+# ** Error: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(4): (vlog-2730) Undefined variable: 'WIDTH'.
+# ** Error (suppressible): C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(4): (vlog-2388) 'in' already declared in this scope (fft_top) at C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(4).
+# -- Importing package fft_pkg
+# ** Error: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(4): (vlog-13294) Identifier must be declared with a port mode: in.
+# End time: 19:49:08 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:49:30 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly.sv 
+# -- Compiling package fft_pkg
+# -- Compiling package butterfly_sv_unit
+# -- Importing package fft_pkg
+# -- Compiling module butterfly
+# 
+# Top level modules:
+# 	butterfly
+# End time: 19:49:30 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:49:30 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly_tb.sv 
+# -- Compiling module butterfly_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	butterfly_tb
+# End time: 19:49:31 on May 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:49:31 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv 
+# -- Compiling module fft_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	fft_tb
+# End time: 19:49:31 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.fft_tb
+# vsim -voptargs="+acc" work.fft_tb 
+# Start time: 19:49:39 on May 14,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Error: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv(20): Module 'fft_top' is not defined.
+#  For instance 'dut' at path 'fft_tb'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# End time: 19:49:39 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:49:54 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly.sv 
+# -- Compiling package fft_pkg
+# -- Compiling package butterfly_sv_unit
+# -- Importing package fft_pkg
+# -- Compiling module butterfly
+# 
+# Top level modules:
+# 	butterfly
+# End time: 19:49:54 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:49:54 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly_tb.sv 
+# -- Compiling module butterfly_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	butterfly_tb
+# End time: 19:49:54 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:49:54 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv 
+# -- Compiling module fft_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	fft_tb
+# End time: 19:49:54 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:49:54 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv 
+# -- Compiling module fft_top
+# ** Error: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(4): (vlog-2730) Undefined variable: 'WIDTH'.
+# ** Error (suppressible): C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(4): (vlog-2388) 'in' already declared in this scope (fft_top) at C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(4).
+# -- Importing package fft_pkg
+# ** Error: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(4): (vlog-13294) Identifier must be declared with a port mode: in.
+# End time: 19:49:54 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:49:58 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv 
+# -- Compiling module fft_top
+# ** Error: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(4): (vlog-2730) Undefined variable: 'WIDTH'.
+# ** Error (suppressible): C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(4): (vlog-2388) 'in' already declared in this scope (fft_top) at C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(4).
+# -- Importing package fft_pkg
+# ** Error: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(4): (vlog-13294) Identifier must be declared with a port mode: in.
+# End time: 19:49:58 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vsim work.butterfly
+# vsim work.butterfly 
+# Start time: 19:50:18 on May 14,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.fft_pkg(fast)
+# Loading work.butterfly_sv_unit(fast)
+# Loading work.butterfly(fast)
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:51:49 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly.sv 
+# -- Compiling package fft_pkg
+# -- Compiling package butterfly_sv_unit
+# -- Importing package fft_pkg
+# -- Compiling module butterfly
+# 
+# Top level modules:
+# 	butterfly
+# End time: 19:51:49 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:51:49 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly_tb.sv 
+# -- Compiling module butterfly_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	butterfly_tb
+# End time: 19:51:49 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:51:49 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv 
+# -- Compiling module fft_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	fft_tb
+# End time: 19:51:49 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:51:49 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv 
+# ** Warning: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(5): (vlog-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling package fft_top_sv_unit
+# -- Importing package fft_pkg
+# -- Compiling module fft_top
+# ** Warning: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(5): (vlog-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# Top level modules:
+# 	fft_top
+# End time: 19:51:49 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Load canceled
+vsim -voptargs=+acc work.fft_tb
+# End time: 19:52:21 on May 14,2025, Elapsed time: 0:02:03
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.fft_tb 
+# Start time: 19:52:21 on May 14,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Warning: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(5): (vopt-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Note: (vopt-143) Recognized 1 FSM in module "fft_top(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.fft_pkg(fast)
+# Loading work.fft_tb(fast)
+# Loading work.fft_top_sv_unit(fast)
+# Loading work.fft_top(fast)
+# Loading work.butterfly_sv_unit(fast)
+# Loading work.butterfly(fast)
+add wave -position insertpoint  \
+sim:/fft_tb/EXP_0 \
+sim:/fft_tb/EXP_1 \
+sim:/fft_tb/EXP_2 \
+sim:/fft_tb/EXP_3 \
+sim:/fft_tb/tmp \
+sim:/fft_tb/clk \
+sim:/fft_tb/rst \
+sim:/fft_tb/start \
+sim:/fft_tb/in \
+sim:/fft_tb/out \
+sim:/fft_tb/valid
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading work.fft_pkg(fast)
+# Loading work.fft_tb(fast)
+# Loading work.fft_top_sv_unit(fast)
+# Loading work.fft_top(fast)
+# Loading work.butterfly_sv_unit(fast)
+# Loading work.butterfly(fast)
+run
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:58:31 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv 
+# -- Compiling module fft_tb
+# -- Importing package fft_pkg
+# ** Warning: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv(9): (vlog-2244) Variable 'clk' is implicitly static. You must either explicitly declare it as static or automatic
+# or remove the initialization in the declaration of variable.
+# ** Warning: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv(10): (vlog-2244) Variable 'rst' is implicitly static. You must either explicitly declare it as static or automatic
+# or remove the initialization in the declaration of variable.
+# ** Error: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv(14): (vlog-2730) Undefined variable: 'clk'.
+# End time: 19:58:31 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:59:22 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv 
+# -- Compiling module fft_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	fft_tb
+# End time: 19:59:22 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.fft_pkg(fast)
+# Loading work.fft_tb(fast)
+# Loading work.fft_top_sv_unit(fast)
+# Loading work.fft_top(fast)
+# Loading work.butterfly_sv_unit(fast)
+# Loading work.butterfly(fast)
+run 100
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:02:40 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv 
+# -- Compiling module fft_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	fft_tb
+# End time: 20:02:40 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.fft_pkg(fast)
+# Loading work.fft_tb(fast)
+# Loading work.fft_top_sv_unit(fast)
+# Loading work.fft_top(fast)
+# Loading work.butterfly_sv_unit(fast)
+# Loading work.butterfly(fast)
+run 100
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:03:49 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv 
+# -- Compiling module fft_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	fft_tb
+# End time: 20:03:49 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.fft_pkg(fast)
+# Loading work.fft_tb(fast)
+# Loading work.fft_top_sv_unit(fast)
+# Loading work.fft_top(fast)
+# Loading work.butterfly_sv_unit(fast)
+# Loading work.butterfly(fast)
+run 100
+add wave -position insertpoint  \
+sim:/fft_tb/dut/clk
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.fft_pkg(fast)
+# Loading work.fft_tb(fast)
+# Loading work.fft_top_sv_unit(fast)
+# Loading work.fft_top(fast)
+# Loading work.butterfly_sv_unit(fast)
+# Loading work.butterfly(fast)
+run all
+# Invalid time value: all
+run -all
+# ** Note: $stop    : C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv(49)
+#    Time: 100 ns  Iteration: 0  Instance: /fft_tb
+# Break in Module fft_tb at C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv line 49
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:06:13 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv 
+# -- Compiling module fft_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	fft_tb
+# End time: 20:06:14 on May 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.fft_pkg(fast)
+# Loading work.fft_tb(fast)
+# Loading work.fft_top_sv_unit(fast)
+# Loading work.fft_top(fast)
+# Loading work.butterfly_sv_unit(fast)
+# Loading work.butterfly(fast)
+run
+run -all
+# ** Note: $stop    : C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv(49)
+#    Time: 100 ns  Iteration: 0  Instance: /fft_tb
+# Break in Module fft_tb at C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv line 49
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:07:58 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv 
+# -- Compiling module fft_tb
+# -- Importing package fft_pkg
+# ** Error: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv(15): (vlog-2730) Undefined variable: 'in'.
+# End time: 20:07:58 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:08:27 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv 
+# -- Compiling module fft_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	fft_tb
+# End time: 20:08:27 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.fft_pkg(fast)
+# Loading work.fft_tb(fast)
+# Loading work.fft_top_sv_unit(fast)
+# Loading work.fft_top(fast)
+# Loading work.butterfly_sv_unit(fast)
+# Loading work.butterfly(fast)
+run -all
+# ** Note: $stop    : C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv(26)
+#    Time: 100 ns  Iteration: 0  Instance: /fft_tb
+# Break in Module fft_tb at C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv line 26
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:09:39 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv 
+# -- Compiling module fft_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	fft_tb
+# End time: 20:09:39 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.fft_pkg(fast)
+# Loading work.fft_tb(fast)
+# Loading work.fft_top_sv_unit(fast)
+# Loading work.fft_top(fast)
+# Loading work.butterfly_sv_unit(fast)
+# Loading work.butterfly(fast)
+run -all
+# ** Note: $stop    : C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv(26)
+#    Time: 100 ns  Iteration: 0  Instance: /fft_tb
+# Break in Module fft_tb at C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv line 26
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:11:46 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv 
+# -- Compiling module fft_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	fft_tb
+# End time: 20:11:46 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.fft_pkg(fast)
+# Loading work.fft_tb(fast)
+# Loading work.fft_top_sv_unit(fast)
+# Loading work.fft_top(fast)
+# Loading work.butterfly_sv_unit(fast)
+# Loading work.butterfly(fast)
+run -all
+# ** Note: $stop    : C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv(26)
+#    Time: 100 ns  Iteration: 0  Instance: /fft_tb
+# Break in Module fft_tb at C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv line 26
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:15:46 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv 
+# -- Compiling module fft_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	fft_tb
+# End time: 20:15:47 on May 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.fft_pkg(fast)
+# Loading work.fft_tb(fast)
+# Loading work.fft_top_sv_unit(fast)
+# Loading work.fft_top(fast)
+# Loading work.butterfly_sv_unit(fast)
+# Loading work.butterfly(fast)
+run -all
+# ** Note: $stop    : C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv(26)
+#    Time: 100 ns  Iteration: 0  Instance: /fft_tb
+# Break in Module fft_tb at C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv line 26
+add wave -position insertpoint  \
+sim:/fft_tb/dut/b0_s1 \
+sim:/fft_tb/dut/b1_s1 \
+sim:/fft_tb/dut/b2_s1 \
+sim:/fft_tb/dut/b3_s1
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.fft_pkg(fast)
+# Loading work.fft_tb(fast)
+# Loading work.fft_top_sv_unit(fast)
+# Loading work.fft_top(fast)
+# Loading work.butterfly_sv_unit(fast)
+# Loading work.butterfly(fast)
+run -all
+# ** Note: $stop    : C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv(26)
+#    Time: 100 ns  Iteration: 0  Instance: /fft_tb
+# Break in Module fft_tb at C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv line 26
+add wave -position insertpoint  \
+sim:/fft_tb/dut/b0_s2 \
+sim:/fft_tb/dut/b1_s2 \
+sim:/fft_tb/dut/b2_s2 \
+sim:/fft_tb/dut/b3_s2
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.fft_pkg(fast)
+# Loading work.fft_tb(fast)
+# Loading work.fft_top_sv_unit(fast)
+# Loading work.fft_top(fast)
+# Loading work.butterfly_sv_unit(fast)
+# Loading work.butterfly(fast)
+run -all
+# ** Note: $stop    : C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv(26)
+#    Time: 100 ns  Iteration: 0  Instance: /fft_tb
+# Break in Module fft_tb at C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv line 26
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:18:23 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv 
+# -- Compiling module fft_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	fft_tb
+# End time: 20:18:23 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.fft_pkg(fast)
+# Loading work.fft_tb(fast)
+# Loading work.fft_top_sv_unit(fast)
+# Loading work.fft_top(fast)
+# Loading work.butterfly_sv_unit(fast)
+# Loading work.butterfly(fast)
+run -all
+# ** Note: $stop    : C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv(27)
+#    Time: 110 ns  Iteration: 0  Instance: /fft_tb
+# Break in Module fft_tb at C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv line 27
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:19:00 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv 
+# -- Compiling module fft_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	fft_tb
+# End time: 20:19:00 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.fft_pkg(fast)
+# Loading work.fft_tb(fast)
+# Loading work.fft_top_sv_unit(fast)
+# Loading work.fft_top(fast)
+# Loading work.butterfly_sv_unit(fast)
+# Loading work.butterfly(fast)
+run -all
+# ** Note: $stop    : C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv(28)
+#    Time: 110 ns  Iteration: 0  Instance: /fft_tb
+# Break in Module fft_tb at C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv line 28
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:25:15 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv 
+# -- Compiling module fft_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	fft_tb
+# End time: 20:25:15 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.fft_pkg(fast)
+# Loading work.fft_tb(fast)
+# Loading work.fft_top_sv_unit(fast)
+# Loading work.fft_top(fast)
+# Loading work.butterfly_sv_unit(fast)
+# Loading work.butterfly(fast)
+# Warning in wave window restart: (vish-4014) No objects found matching '/fft_tb/EXP_0'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/fft_tb/EXP_1'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/fft_tb/EXP_2'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/fft_tb/EXP_3'. 
+run -all
+# ** Note: $stop    : C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv(28)
+#    Time: 110 ns  Iteration: 0  Instance: /fft_tb
+# Break in Module fft_tb at C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv line 28
+
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:26:04 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly.sv 
+# -- Compiling package fft_pkg
+# -- Compiling package butterfly_sv_unit
+# -- Importing package fft_pkg
+# -- Compiling module butterfly
+# 
+# Top level modules:
+# 	butterfly
+# End time: 20:26:05 on May 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:26:05 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/butterfly_tb.sv 
+# -- Compiling module butterfly_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	butterfly_tb
+# End time: 20:26:05 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:26:05 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv 
+# -- Compiling module fft_tb
+# -- Importing package fft_pkg
+# 
+# Top level modules:
+# 	fft_tb
+# End time: 20:26:05 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 20:26:05 on May 14,2025
+# vlog -reportprogress 300 -work work C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv 
+# ** Warning: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(5): (vlog-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling package fft_top_sv_unit
+# -- Importing package fft_pkg
+# -- Compiling module fft_top
+# ** Warning: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(5): (vlog-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# Top level modules:
+# 	fft_top
+# End time: 20:26:05 on May 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Warning: C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_top.sv(5): (vopt-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Note: (vopt-143) Recognized 1 FSM in module "fft_top(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.fft_pkg(fast)
+# Loading work.fft_tb(fast)
+# Loading work.fft_top_sv_unit(fast)
+# Loading work.fft_top(fast)
+# Loading work.butterfly_sv_unit(fast)
+# Loading work.butterfly(fast)
+run -all
+# ** Note: $stop    : C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv(28)
+#    Time: 110 ns  Iteration: 0  Instance: /fft_tb
+# Break in Module fft_tb at C:/Users/song_/Desktop/Code/Digital Audio Visualizer/FFT/fft_tb.sv line 28
+# End time: 20:27:44 on May 14,2025, Elapsed time: 0:35:23
+# Errors: 0, Warnings: 2
